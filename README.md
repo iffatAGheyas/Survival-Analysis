@@ -104,7 +104,7 @@ View detailed method explanations on the project Wiki.
 
 🛠 Requirements
 Python ≥ 3.8
-
+Jupyter Notebook or JupyterLab 
 lifelines
 
 pandas, numpy, matplotlib, patsy, scikit-learn
