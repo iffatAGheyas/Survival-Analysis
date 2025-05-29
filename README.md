@@ -6,43 +6,44 @@ This repository contains a complete survival-analysis workflow on the built-in L
 
 ## 📂 Project Structure
 
+```text
 SurvivalAnalysis/
-├── README.md ← this file
-├── SurvivalAnalysis1.ipynb ← Jupyter notebook with all code
+├── README.md                             ← this file
+├── SurvivalAnalysis1.ipynb               ← Jupyter notebook with all code
 ├── Datasets/
-│ ├── lung_dataset.xlsx ← raw data from lifelines.datasets
-│ └── lung_dataset_processed1.xlsx ← preprocessed & imputed data
+│   ├── lung_dataset.xlsx                 ← raw data from lifelines.datasets
+│   └── lung_dataset_processed1.xlsx      ← preprocessed & imputed data
 ├── Models/
-│ ├── lung_cox_forward_model.pkl ← final time-independent CoxPH
-│ ├── lung_cox_stratified_model.pkl ← stratified CoxPH (sex)
-│ ├── lung_cox_stratified_simple_model.pkl← simplified stratified CoxPH
-│ └── lung_cox_timevarying_model.pkl ← time-varying CoxPH
+│   ├── lung_cox_forward_model.pkl        ← final time-independent CoxPH
+│   ├── lung_cox_stratified_model.pkl     ← stratified CoxPH (sex)
+│   ├── lung_cox_stratified_simple_model.pkl  ← simplified stratified CoxPH
+│   └── lung_cox_timevarying_model.pkl     ← time-varying CoxPH
 └── Outputs/
-├── Tables/
-│ ├── life_table_actuarial.xlsx
-│ ├── lung_cox_forward_summary.xlsx
-│ ├── lung_cox_stratified_simple_summary.xlsx
-│ ├── lung_cox_stratified_summary.xlsx
-│ ├── lung_cox_timevarying_summary.xlsx
-│ └── martingale_linearity_results.xlsx
-└── Plots/
-├── baseline_surv_cumhaz_subplots.png
-├── calibration_plot_1y.png
-├── km_overall.png
-├── km_by_sex.png
-├── life_table_actuarial_survival.png
-├── lung_cox_stratified_forest_plot.png
-├── martingale_meal.cal.png
-├── martingale_pat.karno.png
-├── martingale_ph.ecog.png
-├── partial_effect_meal_cal.png
-├── partial_effect_pat_karno.png
-├── partial_effect_ph_ecog.png
-├── partial_effect_sex.png
-├── schoenfeld_meal.cal.png
-├── schoenfeld_pat.karno.png
-├── schoenfeld_ph.ecog.png
-└── schoenfeld_sex.png
+    ├── Tables/
+    │   ├── life_table_actuarial.xlsx
+    │   ├── lung_cox_forward_summary.xlsx
+    │   ├── lung_cox_stratified_simple_summary.xlsx
+    │   ├── lung_cox_stratified_summary.xlsx
+    │   ├── lung_cox_timevarying_summary.xlsx
+    │   └── martingale_linearity_results.xlsx
+    └── Plots/
+        ├── baseline_surv_cumhaz_subplots.png
+        ├── calibration_plot_1y.png
+        ├── km_overall.png
+        ├── km_by_sex.png
+        ├── life_table_actuarial_survival.png
+        ├── lung_cox_stratified_forest_plot.png
+        ├── martingale_meal.cal.png
+        ├── martingale_pat.karno.png
+        ├── martingale_ph.ecog.png
+        ├── partial_effect_meal_cal.png
+        ├── partial_effect_pat_karno.png
+        ├── partial_effect_ph_ecog.png
+        ├── partial_effect_sex.png
+        ├── schoenfeld_meal.cal.png
+        ├── schoenfeld_pat.karno.png
+        ├── schoenfeld_ph.ecog.png
+        └── schoenfeld_sex.png
 
 
 ---
