@@ -58,9 +58,56 @@ You can clone the Wiki locally with:
 ```bash
 git clone https://github.com/iffatAGheyas/Survival-Analysis.wiki.git
 
-![image](https://github.com/user-attachments/assets/456631b5-6b8d-48c8-b43d-a89753645c43)
-![image](https://github.com/user-attachments/assets/e4e126af-3619-44c0-b902-19db82eb7fb8)
-![image](https://github.com/user-attachments/assets/6e1ad89b-762d-4f28-ba14-0c1a92fb7b1e)
+🚀 Overview of Analysis
+Data Loading & Preprocessing
+
+Imported lifelines.datasets.load_lung (228 patients, 10 columns).
+
+Kept: time, status (0=censored, 1=death), and covariates age, sex, ph.ecog, ph.karno, pat.karno, meal.cal, wt.loss.
+
+Converted sex from {1=male, 2=female} → {1, 0}.
+
+Imputed missing values with K-Nearest Neighbors.
+
+Standard CoxPH with Forward Selection
+
+Univariate c-index screening to seed; forward‐step addition to maximize c-index.
+
+Final model saved as Models/lung_cox_forward_model.pkl.
+
+Diagnostics: Schoenfeld (PH), Martingale (linearity), log-rank test.
+
+Advanced Cox Models
+
+Time-varying CoxPH (lung_cox_timevarying_model.pkl).
+
+Stratified CoxPH on sex with time-interaction (lung_cox_stratified_model.pkl).
+
+Simplified Stratified CoxPH (lung_cox_stratified_simple_model.pkl).
+
+Evaluated by in-sample & 5-fold CV c-index, calibration, forest & partial-effect plots, personalized survival/hazard predictions.
+
+Kaplan–Meier & Life Tables
+
+Overall & stratified KM curves (km_overall.png, km_by_sex.png).
+
+Actuarial life-table intervals & survival estimate (life_table_actuarial.xlsx, life_table_actuarial_survival.png).
+
+📖 How to Use
+Clone this repository.
+
+Open SurvivalAnalysis1.ipynb in Jupyter.
+
+Run cells in order — all data, models, and outputs will be written into the Datasets/, Models/, and Outputs/ subfolders.
+
+View detailed method explanations on the project Wiki.
+
+🛠 Requirements
+Python ≥ 3.8
+
+lifelines
+
+pandas, numpy, matplotlib, patsy, scikit-learn
 📜 License
 MIT License — feel free to adapt or fork for your own learning.
 
